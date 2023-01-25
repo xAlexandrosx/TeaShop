@@ -1,86 +1,167 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/style.css">
-    </head>
-    <body>
-        <header>
-            <div id="title_img_container">
-                <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png" id="tea_cozy">
-            </div>
-            <nav>
-                <ul>
-                    <li>Mission</li>
-                    <li>Featured Tea</li>
-                    <li>Locations</li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="banner">
-                <h2 class="colored_h2">Our Mission</h2>
-                <h3>Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea</h3>
-            </section>
-            <section class="second_section">
-                <h2 class="colored_h2">Tea of the Month</h2>
-                <h3>What's Sleeping at The Tea Cozy?</h3>
-                <div class="menu">
-                    <div class="menu_container">
-                        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-berryblitz.jpg">
-                        <h3>Fall Berry Blitz Tea</h3>
-                    </div>
-                    <div class="menu_container">
-                        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-spiced-rum.jpg">
-                        <h3>Spiced Rum Tea</h3>
-                    </div>
-                    <div class="menu_container">
-                        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-donut.jpg">
-                        <h3>Seasonal Donuts</h3>
-                    </div>
-                    <div class="menu_container">
-                        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-myrtle-ave.jpg">
-                        <h3>Myrtle Ave Tea</h3>
-                    </div>
-                    <div class="menu_container">
-                        <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-bedford-bizarre.jpg">
-                        <h3>Bedford Bizarre Tea</h3>
-                    </div>
-                </div>
-            </section>
-            <section class="third_section">
-                <h2 id="locations_heading">Locations</h2>
-                <div class="containers_container">
-                    <div class="container">
-                        <h3>nightmare</h3>
-                        <p>nightmare</p>
-                        <p>nightmare</p>
-                        <p>nightmare</a>
-                    </div>
-                    <div class="container" id="middle_location">
-                        <h3>nightmare</h3>
-                        <p>nightmare</p>
-                        <p>nightmare</p>
-                        <p>nightmare</a>
-                    </div>
-                    <div class="container">
-                        <h3>nightmare</h3>
-                        <p>nightmare</p>
-                        <p>nightmare</p>
-                        <p>nightmare</a>
-                    </div>
-                </div>
-            </section>
-            <section id="fourth_section">
-                <h2>The Tea Cozy</h2>
-                <h5>contact @teacozy.com</h5>
-                <h5>917-555-8904</h5>
-            </section>
-            <footer>
-                <h5>copyright The Tea Cozy 2017</h5>
-            </footer>
-        </main>
-    </body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color:rgba(255, 245, 238, 0.9);
+}
+
+/* header settings */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid seashell;
+    height: 70px;
+    background-color: black;
+}
+
+ul, li{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: underline;
+    padding:20px;
+}
+
+#tea_cozy{
+    height:50px;
+    width:100%;
+    margin-left:10px;
+}
+
+/* 1st section */
+
+main{
+    margin-top:50px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.banner{
+    margin-top:20px;
+    height:700px;
+    width:1200px;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg);
+}
+
+.colored_h2, h3{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width:100%;
+    padding:10px 0px;
+}
+
+.title_img_container{
+    width:100%;
+}
+
+/* second section */
+
+.second_section{
+    width:1000px;
+}
+
+.menu{
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.menu_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.menu_container img{
+    height:200px;
+    width:300px;
+    margin-bottom:10px;
+}
+
+/* third section */
+
+.third_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:500px;
+    width:1200px;
+    background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg);
+}
+
+.containers_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containers_container .container{
+    width:300px;
+    height:300px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+    background-color: black;
+}
+
+.third_section h3{
+    margin:0;
+}
+
+#middle_location{
+    margin: 0 40px;
+}
+
+#locations_heading{
+    margin-bottom:15px;
+}
+
+/* fourth_section_&_footer */
+
+#fourth_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: space-around;
+    height: 200px;
+}
+
+footer{
+    width:100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+footer h5{
+    margin-left:20px;
+}
